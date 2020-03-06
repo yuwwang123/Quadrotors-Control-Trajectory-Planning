@@ -29,19 +29,6 @@ function [F, M, trpy, drpy] = controller(qd, t, qn, params)
 % trpy: thrust, roll, pitch, yaw (attitude you want to command!)
 % drpy: time derivative of trpy
 %
-% Using these current and desired states, you have to compute the desired
-% controls u, and from there F and M
-%
-
-% =================== Your code goes here ===================
-% ...
-% ==============================
-
-% Desired roll, pitch and yaw (in rad). In the simulator, those will be *ignored*.
-% When you are flying in the lab, they *will* be used (because the platform
-% has a built-in attitude controller). Best to fill them in already
-% during simulation.
-
 phi_des   = 0;
 theta_des = 0;
 psi_des   = 0;
@@ -73,19 +60,15 @@ omega_des = [0; 0; qd{qn}.yawdot_des];
 % Moment
 M = I * (diag(Kp_att)*(alt_des - qd{qn}.euler) + diag(Kv_att)* (omega_des - qd{qn}.omega));
 
-% =================== Your code ends here ===================
-
 % Output trpy and drpy as in hardware
 trpy = [F, phi_des, theta_des, psi_des];
 drpy = [0, 0,       0,         0];
 
 end
 
-%
-% ------------------------------------------------------------
-%    should you decide to write a geometric controller,
-%    the following functions should come in handy
-%
+
+% geometric controller
+
 
 function m = eulzxy2rotmat(ang)
     phi   = ang(1);
