@@ -5,4 +5,5 @@ Implementation of a flight controller, A* planner, and trajectory generator for 
 2. Efficient A* planner using a self coded Priority Queue API
 3. Minimum Snap trajectory generator to generate smooth optimal trajectory for the quadrotors to track
 
+
 ![](quad_demo.gif)
