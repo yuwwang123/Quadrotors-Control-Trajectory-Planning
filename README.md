@@ -4,3 +4,5 @@ Implementation of a flight controller, A* planner, and trajectory generator for 
 1. Casecade Control Structure: Outer-loop Position Control and Inner loop attitude control.
 2. Efficient A* planner using a self coded Priority Queue API
 3. Minimum Snap trajectory generator to generate smooth optimal trajectory for the quadrotors to track
+
+![](quad_demo.gif)
