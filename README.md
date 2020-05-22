@@ -7,3 +7,5 @@ Implementation of a flight controller, A* planner, and trajectory generator for 
 
 
 ![](quad_demo.gif)
+![](quad_test.gif)
+
