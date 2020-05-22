@@ -9,8 +9,10 @@ Implementation of a flight controller, A* planner, and trajectory generator for 
 ![](quad_demo.gif)
 
 Trajectory generation with waypoints pruning.
+
 ![](quad_sim.gif)
 
 Tested on the Crazyflie micro-drone platform
+
 ![](quad_test.gif)
 
